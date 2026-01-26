@@ -1,0 +1,21 @@
+flowchart TB
+    A["START"] --> B["NORMALIZE_INPUT"]
+    B --> C["STORAGE_DECISION"]
+    C -- STRUCTURED_AND_VECTOR --> D["SAVE_POSTGRES"]
+    D --> E["SAVE_MILVUS"]
+    C -- VECTOR_ONLY --> E
+    C -- WEBSITE_INDEXING --> F["INDEX_WEBSITE"]
+    E --> G["END"]
+    F --> G
+
+    style C stroke:#FFD600
+
+flowchart TB
+    A["START"] --> B["NORMALIZE_INPUT"]
+    B --> C["STORAGE_DECISION"]
+    C -- STRUCTURED_AND_VECTOR --> D["SAVE_POSTGRES"]
+    D --> E["SAVE_MILVUS"]
+    C -- VECTOR_ONLY --> E["SAVE_MILVUS"]
+    E --> F["END"]
+
+    style C stroke:#00C853

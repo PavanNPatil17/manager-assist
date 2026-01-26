@@ -1,0 +1,11 @@
+{
+  "dockerfile_lines": [],
+  "graphs": {
+    "manager_assistant": "./assistant.py:graph"
+  },
+  "python_version": "3.12",
+  "dependencies": [
+    "."
+  ],
+  "env": ".env"
+}
